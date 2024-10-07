@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Examples</title>
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <!-- MyDocuments -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scrollToTop.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="logoHeader">
+            <img src="./img/logo.png" alt="logo">
+            <p>Flexbox</p>
+        </div>
+        <nav>
+            <a href="#secRow">ROW</a>
+            <a href="#secColumn">COLUMN</a>
+            <a href="#secFlex">FLEX</a>
+        </nav>
+    </header>
+    <main>
+        <section id="secHero">
+            <h1>Wie ging das mit <strong>Flexbox</strong>?!</h1>
+        </section>
+        <section class="topicArea" id="secRow">
+            <h2>ROW</h2>
+            <div class="exampleArea odd">
+                <h3>CENTER / CENTER</h3>
+                <p>Boxen in der Mitte des Containers platzieren.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">center</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jc_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea even">
+                <h3>SPACE-AROUND / CENTER</h3>
+                <p>Boxen mittig des Containers. Der Zwischenraum wird gleichmäßig um die Boxen verteilt. <br> Jede
+                    Box
+                    hat Link und Rechts den gleichen Zwischenraum.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">space-around</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jsa_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea odd">
+                <h3>SPACE-EVENLY / CENTER</h3>
+                <p>Boxen mittig des Containers. Der Zwischenraum wird gleichmäßig verteilt.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">space-evenly</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jse_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea even">
+                <h3>SPACE-BETWEEN / CENTER</h3>
+                <p>Boxen mittig des Containers. Der Zwischenraum wird gleichmäßig verteilt.<br>Vor dem Ersten und
+                    nach
+                    dem
+                    Letzten Element gibt es kein Zwischenraum.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">space-between</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jsb_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="topicArea" id="secColumn">
+            <h2>COLUMN</h2>
+            <div class="exampleArea odd">
+                <h3>CENTER / CENTER</h3>
+                <p>Boxen in Reihe anzeigen und in der Mitte des Containers platzieren.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p><span class="textHighlight">flex-direction: column</span>;</p>
+                        <p>justify-content: <span class="textHighlight">center</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer c_jc_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea even">
+                <h3>SPACE-AROUND / CENTER</h3>
+                <p>Boxen in Reihe anzeigen und der Zwischenraum wird gleichmäßig um die Boxen verteilt. <br> Jede Box
+                    hat oben und unten den gleichen Zwischenraum.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p><span class="textHighlight">flex-direction: column</span>;</p>
+                        <p>justify-content: <span class="textHighlight">space-around</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer c_jsa_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea odd">
+                <h3>SPACE-EVENLY / CENTER</h3>
+                <p>Boxen in Reihe anzeigen und der Zwischenraum wird gleichmäßig verteilt.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p><span class="textHighlight">flex-direction: column</span>;</p>
+                        <p>justify-content: <span class="textHighlight">space-evenly</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer c_jse_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea even">
+                <h3>SPACE-BETWEEN / CENTER</h3>
+                <p>Boxen in Reihe anzeigen und der Zwischenraum wird gleichmäßig verteilt.<br>Vor dem Ersten und nach
+                    dem
+                    Letzten Element gibt es kein Zwischenraum.</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.className{</p>
+                        <p>display: flex;</p>
+                        <p><span class="textHighlight">flex-direction: column</span>;</p>
+                        <p>justify-content: <span class="textHighlight">space-between</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer c_jsb_ac">
+                        <div class="box boxRegular">
+                            <p>Box 1</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="topicArea" id="secFlex">
+            <h2>FLEX</h2>
+            <div class="exampleArea odd">
+                <h3>FLEX:1</h3>
+                <p>Flexchild mit "Flex:1" nutzt den übrigen Zwischenraum</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.prarent{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">center</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>} <br><br> </p>
+                        <p>.childA{</p>
+                        <p><span class="textHighlight">flex:1</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jc_ac">
+                        <div class="box boxHighlighted boxFlex1">
+                            <p>Child A</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 2</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exampleArea even">
+                <h3>FLEX:2 & FLEX:1</h3>
+                <p>Die Flexwerte addieren sich. Der Zwischenraum wird prozentual aufgeteilt <br> Flex:2 + Flex:1 = 3
+                    (Flex:2 bekommt 66% und Flex:1 bekommt 33% des Zwischenraums)</p>
+                <div class="exampleContainer">
+                    <div class="codeContainer">
+                        <p>.prarent{</p>
+                        <p>display: flex;</p>
+                        <p>justify-content: <span class="textHighlight">center</span>;</p>
+                        <p>align-items: <span class="textHighlight">center</span>;</p>
+                        <p>} <br><br> </p>
+                        <p>.childA{</p>
+                        <p><span class="textHighlight">flex:2</span>;</p>
+                        <p>} <br><br></p>
+                        <p>.childB{</p>
+                        <p><span class="textHighlight">flex:1</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="boxContainer r_jc_ac">
+                        <div class="box boxHighlighted boxFlex2">
+                            <p>Child A</p>
+                        </div>
+                        <div class="box boxHighlightedSec boxFlex1">
+                            <p>Child B</p>
+                        </div>
+                        <div class="box boxRegular">
+                            <p>Box 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>(c) Copyright Marco Gollmer 2024</p>
+    </footer>
+    <!-- Quelle: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+</body>
+
+</html>
